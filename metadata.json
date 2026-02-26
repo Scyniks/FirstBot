@@ -1,0 +1,5 @@
+{
+  "name": "Telegram Echo Bot",
+  "description": "A Telegram bot that repeats a message 10 times at a user-defined interval.",
+  "requestFramePermissions": []
+}
