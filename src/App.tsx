@@ -52,13 +52,14 @@ export default function App() {
               <div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl flex gap-4 items-start">
                 <AlertCircle className="text-amber-600 shrink-0 mt-1" />
                 <div className="space-y-2">
-                  <p className="font-medium text-amber-900">Telegram Token Missing</p>
+                  <p className="font-medium text-amber-900">Configuration Missing</p>
                   <p className="text-amber-800/80 text-sm leading-relaxed">
-                    To start the bot, you need to provide a Telegram Bot Token. 
-                    Go to the <strong>Secrets</strong> panel in AI Studio and add a variable named 
-                    <code className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs mx-1">BotToken</code> 
-                    with your token from <a href="https://t.me/BotFather" target="_blank" className="underline font-semibold">@BotFather</a>.
+                    To start the bot, you need to provide the following secrets in the <strong>Secrets</strong> panel:
                   </p>
+                  <ul className="list-disc list-inside text-sm text-amber-800/80 space-y-1">
+                    <li><code className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs">BotToken</code>: Your token from @BotFather</li>
+                    <li><code className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs">SourceChannel</code>: The ID of your source channel (e.g., -100...)</li>
+                  </ul>
                 </div>
               </div>
             ) : status.status === 'Error' ? (
@@ -97,19 +98,15 @@ export default function App() {
             <ul className="space-y-3 text-sm text-[#141414]/70 leading-relaxed">
               <li className="flex gap-3">
                 <span className="font-mono text-[#5A5A40] font-bold">01.</span>
-                <span>Send <code className="bg-[#F5F5F0] px-1 rounded">/start</code> to the bot on Telegram.</span>
+                <span>Send <code className="bg-[#F5F5F0] px-1 rounded">/start</code> and choose an action from the keyboard.</span>
               </li>
               <li className="flex gap-3">
                 <span className="font-mono text-[#5A5A40] font-bold">02.</span>
-                <span>The bot will ask for a repeat interval (in seconds).</span>
+                <span>Select <strong>Set Repeat Time</strong> to send messages at intervals.</span>
               </li>
               <li className="flex gap-3">
                 <span className="font-mono text-[#5A5A40] font-bold">03.</span>
-                <span>Enter a number (e.g., "2").</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="font-mono text-[#5A5A40] font-bold">04.</span>
-                <span>The bot sends "helllllloooooo my frind" 10 times at that rate.</span>
+                <span>Select <strong>Load Messages</strong> to fetch content from your source channel.</span>
               </li>
             </ul>
           </motion.div>
