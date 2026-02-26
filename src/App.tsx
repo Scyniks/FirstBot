@@ -56,7 +56,7 @@ export default function App() {
                   <p className="text-amber-800/80 text-sm leading-relaxed">
                     To start the bot, you need to provide a Telegram Bot Token. 
                     Go to the <strong>Secrets</strong> panel in AI Studio and add a variable named 
-                    <code className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs mx-1">TELEGRAM_BOT_TOKEN</code> 
+                    <code className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs mx-1">BotToken</code> 
                     with your token from <a href="https://t.me/BotFather" target="_blank" className="underline font-semibold">@BotFather</a>.
                   </p>
                 </div>

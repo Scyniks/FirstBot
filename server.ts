@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 const PORT = 3000;
 
-const token = process.env.TELEGRAM_BOT_TOKEN;
+const token = process.env.BotToken;
 let botStatus = "Not Started";
 let botError = "";
 
